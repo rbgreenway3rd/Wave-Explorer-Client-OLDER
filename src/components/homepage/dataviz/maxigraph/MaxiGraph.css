@@ -1,0 +1,7 @@
+.graph {
+
+    border: 0.3rem;
+    border-style: ridge;
+    border-color: rgb(200, 200, 200);
+    background: white;
+}

@@ -1,0 +1,11 @@
+
+
+.plateimage {
+
+    border: 0.3rem;
+    border-style: ridge;
+    border-color: rgb(200, 200, 200);
+    background: white;
+    width: 1024px;
+    height: 1024px;
+}

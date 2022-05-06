@@ -1,3 +1,11 @@
+## Wireframe
+
+https://www.figma.com/file/dzf06TcChiYf2o53sbfaXz/Wave-Explorer?node-id=0%3A1
+
+## ERD
+
+https://dbdiagram.io/d/625884122514c979033359f2
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
