@@ -11,7 +11,7 @@ export const ApplicationViews = () => {
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </>
   );

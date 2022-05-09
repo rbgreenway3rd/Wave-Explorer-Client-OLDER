@@ -34,8 +34,8 @@ export const PlateImage = () => {
   }, []);
 
   return (
-    <div className="image-container">
-      <h4>PlateImage using canvas element</h4>
+    <div>
+      {/* <h4>PlateImage using canvas element</h4> */}
       <canvas
         className="plateimage"
         id="canvas"
@@ -43,8 +43,8 @@ export const PlateImage = () => {
         width={scaledWidth}
         height={scaledHeight}
       >
-        Error: content is unable to be read... or your current browser does not
-        support canvas element
+        {/* Error: content is unable to be read... or your current browser does not
+        support canvas element */}
       </canvas>
     </div>
   );

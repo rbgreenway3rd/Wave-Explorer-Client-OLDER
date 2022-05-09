@@ -1,3 +1,7 @@
+# WaveExplorer
+
+'WaveExplorer' web application for WaveFront Biosciences
+
 ## Wireframe
 
 https://www.figma.com/file/dzf06TcChiYf2o53sbfaXz/Wave-Explorer?node-id=0%3A1

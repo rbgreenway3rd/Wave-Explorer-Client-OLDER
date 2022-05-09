@@ -7,11 +7,14 @@ import Button from "@mui/material/Button";
 
 export function DataVizContainer() {
   const [showImage, setShowImage] = useState(false);
+  const [buttonText, setButtonText] = useState("Show Plate Image");
   const showHideDiv = () => {
     if (showImage === true) {
       setShowImage(false);
+      setButtonText("Show Plate Image");
     } else {
       setShowImage(true);
+      setButtonText("Hide Plate Image");
     }
   };
 
@@ -25,14 +28,22 @@ export function DataVizContainer() {
           <MaxiGraph />
         </div>
       </div>
-      <Button variant="contained" onClick={() => showHideDiv((prev) => !prev)}>
-        Show Plate Image
-      </Button>
-      {showImage && (
-        <div className="plate_image">
-          <PlateImage />
-        </div>
-      )}
+      <div className="image_container">
+        <Button
+          variant="contained"
+          onClick={() => showHideDiv((prev) => !prev)}
+          style={{
+            width: "100%",
+          }}
+        >
+          {buttonText}
+        </Button>
+        {showImage && (
+          <div className="plate_image">
+            <PlateImage />
+          </div>
+        )}
+      </div>
     </div>
   );
 }
