@@ -16,7 +16,7 @@ export const PlateImage = () => {
   const [result, setResult] = useState([]);
   const [plate, setPlate] = useState({});
   const getExperiments = () => {
-    return fetch("http://192.168.1.20:8000/experiment", {
+    return fetch("http://localhost:8000/experiment", {
       headers: {
         Authorization: `Token ${localStorage.getItem("waveexplorer_token")}`,
       },
