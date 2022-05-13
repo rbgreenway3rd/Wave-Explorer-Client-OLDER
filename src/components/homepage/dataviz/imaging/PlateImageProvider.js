@@ -3,7 +3,7 @@ import React, { useState } from "react";
 export const PlateImageContext = React.createContext();
 
 export const PlateImageProvider = (props) => {
-  const [plateimage, setPlateImage] = useState([]);
+  const [plateimages, setPlateImage] = useState([]);
   const [result, setResult] = useState([]);
 
   const getPlateImage = () => {
@@ -27,7 +27,7 @@ export const PlateImageProvider = (props) => {
   return (
     <PlateImageContext.Provider
       value={{
-        plateimage,
+        plateimages,
         getPlateImage,
         getPlateImageById,
       }}
