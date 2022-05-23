@@ -5,6 +5,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Fade from "@mui/material/Fade";
+import Tooltip from "@mui/material/Tooltip";
 import { Navigate, Routes, Route, Link, Outlet } from "react-router-dom";
 
 export default function NavBarMenu() {
@@ -27,15 +28,17 @@ export default function NavBarMenu() {
   } else {
     return (
       <div>
-        <IconButton
-          id="fade-button"
-          aria-controls={open ? "fade-menu" : undefined}
-          aria-haspopup="true"
-          aria-expanded={open ? "true" : undefined}
-          onClick={handleClick}
-        >
-          <MenuIcon />
-        </IconButton>
+        <Tooltip title="Menu">
+          <IconButton
+            id="fade-button"
+            aria-controls={open ? "fade-menu" : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? "true" : undefined}
+            onClick={handleClick}
+          >
+            <MenuIcon />
+          </IconButton>
+        </Tooltip>
         <Menu
           id="fade-menu"
           MenuListProps={{

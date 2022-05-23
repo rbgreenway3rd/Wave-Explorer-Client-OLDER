@@ -1,0 +1,19 @@
+.navbar {
+    display: flex;
+    
+  
+}
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.navbartitle {
+    padding-right: 9rem;
+}
+.wavefrontlogo {
+    width: 80%;
+    height: auto;
+    margin-top: 6px;
+}
