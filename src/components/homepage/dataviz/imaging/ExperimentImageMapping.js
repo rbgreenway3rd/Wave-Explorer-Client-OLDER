@@ -61,18 +61,28 @@ function ExperimentImageDataMapping() {
   // Backend 'experiment_image' view module is configured to only fetch the first 10 items in 'experimentimage' array to manage performance
   // <------- NOTE! ------->
 
-  function getExperimentImageData() {
-    return fetch("http://localhost:8000/experimentimage", {
+  const getExperimentImageData = async () => {
+    const response = await fetch("http://localhost:8000/experimentimage", {
       headers: {
         Authentication: `Token ${localStorage.getItem("waveexplorer_token")}`,
       },
-    })
-      .then((res) => res.json())
-      .then(setImages);
-  }
+    });
+    const data = await response.json();
+    return data;
+  };
+
+  //   function getExperimentImageData() {
+  //     return fetch("http://localhost:8000/experimentimage", {
+  //       headers: {
+  //         Authentication: `Token ${localStorage.getItem("waveexplorer_token")}`,
+  //       },
+  //     })
+  //       .then((res) => res.json())
+  //       .then(setImages);
+  //   }
 
   useEffect(() => {
-    getExperimentImageData();
+    getExperimentImageData().then(setImages);
   }, []);
 
   // <------- NOTE! ------->
