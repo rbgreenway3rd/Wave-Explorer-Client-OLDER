@@ -1,33 +1,33 @@
 import React, { useState } from "react";
-import "./DataVizContainer.css";
+// import "./DataVizContainer.css";
 import MaxiGraph from "./maxigraph/MaxiGraph";
 import MiniGraphs from "./minigraphs/MiniGraphs";
 import { PlateImage } from "./imaging/PlateImage";
 import Button from "@mui/material/Button";
 
 export function DataVizContainer() {
-  const [showImage, setShowImage] = useState(false);
-  const [buttonText, setButtonText] = useState("Show Plate Image");
+  const [showData, setShowData] = useState(false);
+  const [buttonText, setButtonText] = useState("Show Experiment Data");
   const showHideDiv = () => {
-    if (showImage === true) {
-      setShowImage(false);
-      setButtonText("Show Plate Image");
+    if (showData === true) {
+      setShowData(false);
+      setButtonText("Show Experiment Data");
     } else {
-      setShowImage(true);
-      setButtonText("Hide Plate Image");
+      setShowData(true);
+      setButtonText("Hide Experiment Data");
     }
   };
 
   return (
     <div className="container">
-      <div className="wrapper">
+      {/* <div className="wrapper">
         <div className="minigraphs">
           <MiniGraphs />
         </div>
         <div className="maxigraph">
           <MaxiGraph />
         </div>
-      </div>
+      </div> */}
       <div className="image_container">
         <Button
           variant="contained"
@@ -38,7 +38,7 @@ export function DataVizContainer() {
         >
           {buttonText}
         </Button>
-        {showImage && (
+        {showData && (
           <div className="plate_image">
             <PlateImage />
           </div>
@@ -49,3 +49,22 @@ export function DataVizContainer() {
 }
 
 export default DataVizContainer;
+
+// {
+//   <div className="experiment__image__indicator__container">
+//   <Button
+//     variant="contained"
+//     onClick={() => showHideExperimentImageIndicatorSection((prev) => !prev)}
+//     style={{
+//       width: "100%",
+//     }}
+//   >
+//     {indicatorButtonText}
+//   </Button>
+//   {showExperimentImageIndicatorSection && (
+//     <div className="plate_image">
+//       <PlateImage />
+//     </div>
+//   )}
+// </div>;
+// }

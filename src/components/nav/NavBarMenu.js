@@ -23,7 +23,7 @@ export default function NavBarMenu() {
     setIsLogout(true);
   };
 
-  if (isLogout == true) {
+  if (isLogout === true) {
     return <Navigate to="/login" />;
   } else {
     return (
