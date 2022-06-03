@@ -6,7 +6,7 @@ export function Home() {
   return (
     <div className="home">
       <NavBar />
-      <DataVizContainer style={{ height: "auto" }} />
+      <DataVizContainer />
       <Footer />
     </div>
   );

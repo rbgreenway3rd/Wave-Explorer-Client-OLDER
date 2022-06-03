@@ -57,9 +57,9 @@ function ExperimentImageDataMapping() {
     }
   };
 
-  // <---- NOTE ---->
+  // <------- NOTE! ------->
   // Backend 'experiment_image' view module is configured to only fetch the first 10 items in 'experimentimage' array to manage performance
-  // <---- NOTE ---->
+  // <------- NOTE! ------->
 
   function getExperimentImageData() {
     return fetch("http://localhost:8000/experimentimage", {
@@ -75,6 +75,11 @@ function ExperimentImageDataMapping() {
     getExperimentImageData();
   }, []);
 
+  // <------- NOTE! ------->
+  // <- NEEDS TO BE FIXED ->
+  // 'getExperimentImageData()' runs twice when component renders...
+  // <------- NOTE! ------->
+
   return (
     <div className="container">
       <h1 className="experiment__image__header">Experiment Data:</h1>
@@ -84,10 +89,7 @@ function ExperimentImageDataMapping() {
           id={`image--${image.experimentimageid}`}
           key={image.experimentimageid}
         >
-          <h2>
-            Experiment ID:{" "}
-            {image.experimentindicatorid.experimentid.experimentid}
-          </h2>
+          <h2>Experiment Image ID: {image.experimentimageid}</h2>
           <section>
             <h3 className="experiment__image__id">Basic Info:</h3>
             <div className="experiment__image__id">

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-// import "./DataVizContainer.css";
+import "./DataVizContainer.css";
 import MaxiGraph from "./maxigraph/MaxiGraph";
 import MiniGraphs from "./minigraphs/MiniGraphs";
 import { PlateImage } from "./imaging/PlateImage";
 import Button from "@mui/material/Button";
+import ExperimentImageDataMapping from "./imaging/ExperimentImageMapping";
 
 export function DataVizContainer() {
   const [showData, setShowData] = useState(false);
@@ -20,15 +21,15 @@ export function DataVizContainer() {
 
   return (
     <div className="container">
-      {/* <div className="wrapper">
+      <div className="graph__container">
         <div className="minigraphs">
           <MiniGraphs />
         </div>
         <div className="maxigraph">
           <MaxiGraph />
         </div>
-      </div> */}
-      <div className="image_container">
+      </div>
+      <div className="image__container">
         <Button
           variant="contained"
           onClick={() => showHideDiv((prev) => !prev)}
@@ -39,8 +40,8 @@ export function DataVizContainer() {
           {buttonText}
         </Button>
         {showData && (
-          <div className="plate_image">
-            <PlateImage />
+          <div className="experiment_image_data_mapping">
+            <ExperimentImageDataMapping />
           </div>
         )}
       </div>
